@@ -74,6 +74,8 @@ install_sonarqube() {
 
   chmod +x ${SONAR_HOME}/elasticsearch/bin/elasticsearch
 
+  # increase limits
+  sysctl -w vm.max_map_count=262144
   if [ "${PIPESTATUS[*]}" != "0" ]; then
     echo " !     Failed to install Sonar"
     exit 1
