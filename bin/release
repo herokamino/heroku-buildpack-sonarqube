@@ -7,7 +7,7 @@ cat <<EOF
 ---
 
 config_vars:
-  JAVA_OPTS: -Xmx384m -Xss512k -XX:+UseCompressedOops -XX:+UseContainerSupport
+  JAVA_TOOL_OPTS: -Xmx2g -XX:+UseContainerSupport
 addons:
   heroku-postgresql
 EOF
